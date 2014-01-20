@@ -30,7 +30,7 @@ Also have a `Linux` system that could fit into your machine's RAM. Then :
 ```shell
 git clone https://github.com/lacravate/wild.git`
 wild/scripts/generate_wild.sh wild/
-``
+```
 
 You'll have `wild.iso` ready in the current directory. Boot (see Tips below) on
 this `ISO 9660` image, and if you have a system installed on `sda1` (first disk
