@@ -20,7 +20,9 @@ This system prepares the ground for another `Linux` system to be aptly
 `chroot'ed'`, copies (or deflates through `cpio` or `tar` archive) the
 chrooted-to-be system in RAM, and `chroot`s it.
 
-As far as i know, it could be any system, only architecture limitations apply.
+As far as i know, it could be any system, only architecture limitations apply. Of, cource, the more refined, or complicated, or demanding, the targeted system (or desktop) is, the more tweaks and adaptations it could require.
+
+I did what i could to ease this part, if you have suggestions, and/or better ideas, they are much welcome.
 
 ## Use
 
@@ -48,10 +50,10 @@ The existence of a `provision/provision.cfg` file will be checked and sourced as
 as shell script to export variables.
 
 ```
-export ROOT=/dev/sda5 # partition were chrooted-to-be system is if it is not on
+export ROOT_DEVICE=/dev/sda5 # partition were chrooted-to-be system is if it is not on
                       # /dev/sda1
 export HOSTNAME=host # if host name wild is not good for you
-export HOME=/dev/sdf1 # the partition holding the /home directory, if any
+export HOME_DEVICE=/dev/sdf1 # the partition holding the /home directory, if any
 export ROOT_PASSWORD=root #wanna set the root password of the elementary Debian ?
 export BOOTUP=/home/startup.sh # when system is chrooted, launches this script to
                                # setup a few things on chrooted system
